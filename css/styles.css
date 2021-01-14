@@ -1,0 +1,236 @@
+/*background-color: #FFFFFF;*/
+/*accent-color: 2196F3*/
+/*head-text-color: 212121*/
+/*text-color: 757575*/
+/*banner-background-color: #2F303A;*/
+/*banner-text-color: #FFFFFF;*/
+/*team-background-color: #F5F4FA;*/
+
+:root {
+  --accent-color: #2196f3;
+  --head-text-color: #212121;
+  --text-color: #757575;
+  --primary-white-color: #ffffff;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+  --team-background-color: #f5f4fa;
+  --banner-background-color: #2f303a;
+}
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+body {
+  color: var(--head-text-color);
+  background-color: var(--primary-white-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*top-nav*/
+.top-nav {
+  background-color: var(--primary-white-color);
+}
+
+.logo-header {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.logo {
+  color: var(--head-text-color);
+}
+
+.site-nav {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link {
+  color: var(--head-text-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .link:active {
+  color: var(--accent-color);
+}
+
+.link-mail,
+.link-phone {
+  color: var(--text-color);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.link-mail:hover,
+.link-mail:focus,
+.link-phone:hover,
+.link-phone:focus {
+  color: var(--accent-color);
+}
+
+/*banner*/
+.banner-container {
+  background-color: var(--banner-background-color);
+}
+
+.banner-title {
+  color: var(--primary-white-color);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: var(--team-background-color);
+  color: inherit;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+/*after-banner*/
+.after-banner {
+  color: var(--head-text-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+}
+
+.section-item {
+  color: var(--head-text-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.description {
+  color: var(--text-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+/*what-we-do*/
+.section-title {
+  color: var(--head-text-color);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+}
+
+/*our-team*/
+.section-our-team {
+  background-color: var(--team-background-color);
+  color: var(--head-text-color);
+}
+.team-member {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: var(--head-text-color);
+}
+
+.occupation {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+/*footer*/
+.footer {
+  background-color: var(--banner-background-color);
+  font-style: normal;
+}
+.logo-footer {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.footer .logo {
+  color: var(--primary-white-color);
+}
+.footer-adress {
+  color: var(--primary-white-color);
+  font-style: normal;
+}
+
+.footer-mail {
+  color: var(--footer-link-color);
+  font-style: normal;
+}
+
+.footer-phone {
+  color: var(--footer-link-color);
+  font-style: normal;
+}
+
+/*portfolio*/
+
+.project-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: var(--head-text-color);
+}
+
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
