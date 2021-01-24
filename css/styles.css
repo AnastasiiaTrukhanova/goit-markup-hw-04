@@ -15,6 +15,26 @@
   --team-background-color: #f5f4fa;
   --banner-background-color: #2f303a;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 a,
 ul {
   text-decoration: none;
@@ -30,12 +50,23 @@ body {
   font-style: normal;
 }
 /*common*/
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .button {
   background-color: var(--team-background-color);
   color: inherit;
-  font-weight: 700;
+
   font-size: 16px;
-  line-height: 1.87;
+
   letter-spacing: 0.06em;
   border-radius: 4px;
 }
@@ -45,19 +76,49 @@ body {
 .button:active {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  cursor: pointer;
 }
 
+.current {
+  color: var(--accent-color);
+}
 .section-title {
   color: var(--head-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  text-align: center;
+
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 /*top-nav*/
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .top-nav {
   background-color: var(--primary-white-color);
+  display: flex;
+  align-items: center;
 }
 
 .logo-header {
@@ -72,6 +133,7 @@ body {
 
 .logo {
   color: var(--head-text-color);
+  margin-right: 93px;
 }
 
 .site-nav {
@@ -81,16 +143,30 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
 
+.site-nav > li:not(:last-child),
+.header-contacts > li:not(:last-child) {
+  margin-right: 50px;
+}
 .site-nav .link {
   color: var(--head-text-color);
 }
-
+.site-nav .link.current {
+  color: var(--accent-color);
+}
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-nav .link:active {
   color: var(--accent-color);
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .link-contacts {
@@ -101,6 +177,9 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .link-contacts:hover,
@@ -109,10 +188,16 @@ body {
 }
 
 /*banner*/
-.banner-container {
+.banner {
   background-color: var(--banner-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
-
+.banner-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
+}
 .banner-title {
   color: var(--primary-white-color);
   font-weight: 900;
@@ -121,9 +206,36 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
+  padding: 0;
+}
+.banner-button {
+  font-weight: 700;
+  line-height: 1.87;
+
+  padding: 10px 32px;
+  min-width: 200px;
+}
+/*after-banner*/
+.after-banner {
+  padding: 94px 0;
+}
+.after-banner > .container {
+  text-align: left;
 }
 
-/*after-banner*/
+.after-banner-list > li {
+  width: calc((100% - (3 * 30px)) / 4);
+}
+
+.after-banner-list {
+  display: flex;
+}
+.section-item > li:not(:last-child),
+.description > li:not(:last-child) {
+  margin-right: 30px;
+}
 .section-item {
   color: var(--head-text-color);
   font-weight: 700;
@@ -131,6 +243,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .description {
@@ -140,12 +255,42 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*what-we-do*/
+.images-list {
+  display: flex;
+}
+
+.images-list > li:not(:last-child) {
+  margin-right: 30px;
 }
 
 /*our-team*/
 .section-our-team {
   background-color: var(--team-background-color);
   color: var(--head-text-color);
+
+  padding: 94px 0;
+}
+
+.team-list {
+  display: flex;
+}
+.team-list > li {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-list > li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.member-card {
+  padding: 30px;
 }
 .team-member {
   font-weight: 500;
@@ -153,6 +298,8 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--head-text-color);
+
+  margin-bottom: 10px;
 }
 
 .occupation {
@@ -167,7 +314,13 @@ body {
 .footer {
   background-color: var(--banner-background-color);
   font-style: normal;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
+.footer > .container {
+  text-align: left;
+}
+
 .logo-footer {
   font-family: Raleway;
   font-style: normal;
@@ -180,7 +333,12 @@ body {
 
 .footer .logo {
   color: var(--primary-white-color);
+  margin-bottom: 20px;
+  margin-right: 0;
+  padding: 0;
+  display: inline-block;
 }
+
 .footer-adress {
   color: var(--primary-white-color);
   font-style: normal;
@@ -188,6 +346,9 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 .footer-contacts {
@@ -197,16 +358,60 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 /*portfolio*/
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.portfolio-list > li:not(:last-child) {
+  margin-right: 8px;
+}
+.list-buttons {
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: inherit;
 
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.project-content {
+  margin: 20px 24px;
+  text-align: left;
+}
+.project-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: calc((100% - (3 * 30px)) / 3);
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
 .project-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--head-text-color);
+
+  margin-bottom: 4;
 }
 
 .text {
@@ -215,4 +420,7 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--text-color);
+
+  margin-top: 0;
+  margin-bottom: 0;
 }
