@@ -90,7 +90,6 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
 
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -107,6 +106,8 @@ body {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
+
+  border-bottom: 1px solid #ececec;
 }
 
 .header .container {
@@ -232,8 +233,8 @@ body {
 .after-banner-list {
   display: flex;
 }
-.section-item > li:not(:last-child),
-.description > li:not(:last-child) {
+
+.after-banner-list > li:not(:last-child) {
   margin-right: 30px;
 }
 .section-item {
@@ -261,6 +262,10 @@ body {
 }
 
 /*what-we-do*/
+.what-we-do {
+  padding-bottom: 94px;
+}
+
 .images-list {
   display: flex;
 }
@@ -394,7 +399,7 @@ body {
 }
 
 .project-content {
-  margin: 20px 24px;
+  padding: 20px 24px;
   text-align: left;
 }
 .project-item {
