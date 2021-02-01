@@ -181,6 +181,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: auto;
+  fill: currentColor;
 }
 
 .link-contacts:hover,
@@ -188,11 +189,32 @@ body {
   color: var(--accent-color);
 }
 
+.header-mail {
+  width: 16px;
+  height: 12px;
+  display: flex;
+  margin-right: 10px;
+}
+.header-phone {
+  width: 10px;
+  height: 16px;
+  display: flex;
+  margin-right: 10px;
+}
 /*banner*/
 .banner {
   background-color: var(--banner-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.1),
+      rgba(47, 48, 58, 0.1)
+    ),
+    url(../images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .banner-container {
   margin-left: auto;
@@ -237,6 +259,7 @@ body {
 .after-banner-list > li:not(:last-child) {
   margin-right: 30px;
 }
+
 .section-item {
   color: var(--head-text-color);
   font-weight: 700;
@@ -259,6 +282,16 @@ body {
 
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.info-icons-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
 }
 
 /*what-we-do*/
@@ -286,6 +319,7 @@ body {
   display: flex;
 }
 .team-list > li {
+  background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -314,6 +348,68 @@ body {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
+.team-social-list {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--primary-white-color);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+/*our-clients*/
+.our-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+.clients-list > li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
 
 /*footer*/
 .footer {
@@ -323,9 +419,16 @@ body {
   padding-bottom: 60px;
 }
 .footer > .container {
+  display: flex;
   text-align: left;
+  align-items: baseline;
 }
-
+.footer-container-address {
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+  margin-right: 70px;
+}
 .logo-footer {
   font-family: Raleway;
   font-style: normal;
@@ -368,6 +471,36 @@ body {
   margin-bottom: 9px;
 }
 
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-title {
+  font-size: 700;
+  color: var(--primary-white-color);
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.social-network-list {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.social-network-list > li:not(:last-child) {
+  margin-right: 10px;
+}
+.social .social-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+.social .social-icon {
+  fill: var(--primary-white-color);
+}
+.social .social-link:hover,
+.social .social-link:focus {
+  background: var(--accent-color);
+}
 /*portfolio*/
 .portfolio {
   padding-top: 94px;
@@ -401,12 +534,14 @@ body {
 .project-content {
   padding: 20px 24px;
   text-align: left;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 .project-item {
   margin-right: 30px;
   margin-bottom: 30px;
   width: calc((100% - (3 * 30px)) / 3);
-  border: 1px solid #eee;
   box-sizing: border-box;
 }
 .project-name {
@@ -428,4 +563,9 @@ body {
 
   margin-top: 0;
   margin-bottom: 0;
+}
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
